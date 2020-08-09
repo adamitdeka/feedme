@@ -1,0 +1,22 @@
+<section class="dash">
+    <div id="packageListContainer">
+        <table id="packageList">
+            <tr class="packageItem">
+            <th>Name</th>
+            <th>Delete</th>
+            <th>Update</th>
+            </tr>
+            {{#each package}}
+            <tr class="packageItem">
+                <td>{{this.packagename}}</td>
+                <td>
+                    <button onclick="deletePackage('{{this._id}}')">Delete</button>
+                </td>
+                <td>
+                    <a href="/package/{{this._id}}"><button>Update</button></a>                               
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</section>

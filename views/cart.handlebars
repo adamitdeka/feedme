@@ -1,0 +1,25 @@
+<section class="dash">
+    <div id="packageListContainer">
+        <table id="packageList">
+            <tr class="packageItem">
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+            {{#each packages}}
+            <tr class="packageItem">
+                <td>{{this.packagename}}</td>
+                <td>{{this.packageQtn}}</td>
+                <td>{{this.packageTotalPrice}}</td>
+                <td>
+                    <button onclick="removeFromCart('{{this.packageid}}')">Remove</button>                               
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+
+        <div class="totalAmount"><b>Total Amount : </b>{{totalPrice}}</div>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<section id="hero" class="hero">
+   <div id="hero_content">
+      <img src="images/dash.png" alt="Feeding your hunger" class="dash_content">
+   </div>
+</section>
+<section id="dash" class="dash">
+   <div class="dash-wrapper">
+      <div class="welcome-box">
+         <p>Welcome!</p>
+      </div>
+      <h2>Your Account</h2>
+      <p>{{Greeting}}</p>
+      <p>Welcome to FeedME</p>
+   </div>
+  
+   {{#if Employee}}
+   <div><a href="/clerkpackages">Edit Packages</a></div>
+   <div></div><a href="/addpackage">Add New Package</a></div>
+   {{/if}}
+   
+</section>

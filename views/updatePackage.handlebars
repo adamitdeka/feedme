@@ -1,0 +1,21 @@
+<section id="showpackage-container">
+    <div id="pacagedesc-container">
+    
+        <form method="POST" action="/package/{{packageId}}">
+            <b>Title</b> : <input type="text" name="packagename" value="{{packageTitle}}">
+            <b>Price</b> : <input type="number" name="packageprice" value="{{packagePrice}}">
+            <b>description</b> : <input type="text" name="description" value="{{packageDesc}}">
+            <b>category</b> : <input type="text" name="foodcategory" value="{{packageCategory}}">
+            <b>meals</b> : <input type="text" name="meals" value="{{packageMeals}}">
+            <b>productImage</b> : <input type="text" name="productImage" value="{{packageImage}}"> 
+            <button type="submit" >Update</button>
+        </form>
+        
+        {{!-- <div id="orderQtn" >
+            <label for="packageQtn">Quantity</label>
+            <input type="number" id="packageQtn" value="1">
+        </div> 
+        <button type="submit" onclick="addOrder('{{packageId}}')">Add to cart</button> --}}
+        
+    </div>
+</section>

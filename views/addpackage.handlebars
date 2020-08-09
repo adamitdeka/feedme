@@ -1,0 +1,49 @@
+<section id="data-entry" class="data-entry">
+   <div id="add-wrapper">
+      <div class="package-title">
+         <h2>Create Meal Packages</h2>
+      </div>
+      <form id="add-form" action="/addpackage" method="POST" autocomplete="off" enctype="multipart/form-data">
+         <fieldset>
+            <legend>Meal Package Information</legend>
+               <div class="add-row">
+                  <label for="packagename">Package Name</label>
+                  <input id="packagename" type="text" name="packagename"/>
+               </div>
+               <div class="add-row">
+                  <label for="packageprice">Price</label>
+                  <input id="packageprice" type="text" name="packageprice"/>
+               </div>
+               <div class="add-row">
+                  <label for="description" >Description</label><br>
+                  {{!-- <input id="description" type="text" name="description"/> --}}
+                  <textarea name="description" id="description" cols="36" rows="4"></textarea>
+               </div>
+               <div class="add-row">
+                  <label for="foodcategory">Food Category</label>
+                  <input id="foodcategory" type="text" name="foodcategory"/>
+               </div>
+               <div class="add-row">
+                  <label for="meals">Number of Meals</label>
+                  <input id="meals" type="text" name="meals"/>
+               </div>
+               <div class="add-row">
+                  <label for="istoppackage">Top Package</label>
+                  <input id="istoppackage" type="checkbox" name="istoppackage"/>
+               </div>
+               <div class="add-row">
+                  <label for="productImage">Upload a photo</label>
+                  <div class="add-photo-row">
+                     <input class="form-control" id="productImage" name="productImage" type="file"/>
+                  </div>
+                  
+               </div>
+               <div class="continue-button">
+                  <button type="submit" class="continue">Add Meal Package</button>
+                  {{!-- <button type="submit" class="add-continue">Add Meal Package</button> --}}
+                  {{!-- <input type="submit" class= "" value="Add Meal Package"/> --}}
+               </div>
+         </fieldset>
+      </form>
+   </div>
+</section>

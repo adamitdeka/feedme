@@ -1,0 +1,39 @@
+<section id="hero" class="hero">
+   <div id="hero_content">
+      <img src="images/Green-Leafy-Salad-Banner.png" alt="Leafy Salad Banner" class="hero_content">
+   </div>
+</section>
+<!-- Login Content -->
+<section id="login" class="login">
+   <div id="login-wrapper">
+      <h2>Customer Login</h2>
+      {{#if errorMessage}}
+         <div class="alert-error">{{errorMessage}}</div>
+      {{/if}}
+      <p style="color:red;">{{msg}}</p>
+      <form id="login-form" action="login" method="POST" autocomplete="off"> 
+         <div class="login-q">
+            <label for="loginemail" class="content-label">Email</label>
+            <input id="loginemail" type="email" name="loginemail" value="{{users.loginemail}}">
+            {{#if errors.loginemail}}
+               <p>The field is required</p>
+            {{/if}}
+         </div>
+         <div class="login-q">
+             <label for="loginpassword" class="content-label">Password</label>
+            <input id="loginpassword" type="password" name="loginpassword">
+            {{#if errors.loginpassword}}
+               <p>The field is required</p>
+            {{/if}}
+            <a href="#" class="forgot">Forgot your password?</a><br>
+         </div>
+         <div class="continue-button">
+            <button type="submit" class="continue">Login</button>
+            <hr>
+            <p class="or">OR</p>
+            <button type="button" class="continue">Log In with Google</button><br>
+            <button type="button" class="continue">Log IN with Facebook</button>
+         </div> 
+      </form>
+   </div>
+</section>

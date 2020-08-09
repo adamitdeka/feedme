@@ -1,0 +1,53 @@
+<section id="hero" class="hero">
+   <div id="hero_content">
+      <img src="images/Green-Leafy-Salad-Banner.png" alt="Leafy Salad Banner" class="hero_content">
+   </div>
+</section>
+<!-- Sign Up Content -->
+<section id="signup" class="signup">
+   <div id="signup-wrapper">
+      <h2>Create Account</h2>
+      <form id="signup-form" action="signup" method="POST" autocomplete="off"> 
+         <div class="form-row">
+            <label for="firstname" class="content-label">First Name</label>
+            <input id="firstname" type="text" name="firstname" value="{{users.firstname}}">
+            {{#if errors.firstname}}
+               <p>The field is required</p>
+            {{/if}}
+         </div>
+         <div class="form-row">
+            <label for="lastname" class="content-label">Last Name</label>
+            <input id="lastname" type="text" name="lastname" value="{{users.lastname}}"> 
+            {{#if errors.lastname}}
+               <p>The field is required</p>
+            {{/if}}
+         </div>
+         <div class="form-row">
+            <label for="email" class="content-label">Email</label>
+            <input id="email" type="email" name="email" value="{{users.email}}">
+             {{#if errors.email}}
+               <p>Invalid email</p>
+            {{/if}}
+         </div>
+         <div class="form-row">
+            <label for="password" class="content-label">Password</label>
+            <input id="password" type="password" name="password" value="{{users.password}}">
+            {{#if errors.password}}
+               <p>Invalid password</p>
+            {{/if}}
+         </div>
+         <div class="form-row">
+            <label for="dataclerk">Employee</label>
+            <input id="dataclerk" type="checkbox" name="dataclerk">
+         </div>
+         <div class="continue-button">
+            <button type="submit" class="continue">Continue</button>
+            <hr>
+            <p class="or">OR</p>
+            <button type="button" class="continue">Log In with Google</button><br>
+            <button type="button" class="continue">Log IN with Facebook</button>
+            <p>Already have an account? <a href="login"> Login</a></p>
+         </div> 
+      </form>
+   </div>
+</section>

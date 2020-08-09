@@ -1,0 +1,71 @@
+<section id="hero" class="hero">
+   <div id="hero_content">
+      <img src="images/our-meal-packages.png" alt="Our Meal Packages Banner" class="meal_content">
+   </div>
+</section>
+<!-- Meal Packages -->
+<section id="meals" class="meals">
+   <div id="meal-wrapper">
+      <div class="meal-title"> 
+      </div>
+      <div id="mealcontent">
+         {{!-- <div class="package-product" value="">
+            <img src="images/keto-meal.jpg" alt="Keto Meal" value="">
+            <div class="package-info">
+               <h3><strong>Keto</strong></h3>
+               <p>A combination of high-fat, <br> low-carb meals with sufficient-protein</p>
+               <p class="deals">Includes 3 Meals</p>
+               <p class="price">from <strong>$110</strong></p>
+            </div>
+         </div>
+         <div class="package-product">
+            <img src="images/vegetarian-meal.jpg" alt="Vegetarian Meal">
+            <div class="package-info">
+               <h3><strong>Vegetarian</strong></h3>
+               <p>A healthy vegetarian package <br> with all your nutritional benefits</p>
+               <p class="deals">Includes 4 Meals</p>
+               <p class="price">from <strong>$130</strong></p>
+            </div>
+         </div>
+         <div class="package-product">
+            <img src="images/weight-loss-meal.jpg" alt="Weight Loss Meal">
+            <div class="package-info">
+               <h3><strong>Weight Loss</strong></h3>
+               <p>A combination of low-carb, low-fat, <br> and high-protein to keep you feeling full</p>
+               <p class="deals">Includes 3 Meals</p>
+               <p class="price">from <strong>$110</strong></p>
+            </div>
+         </div>
+         <div class="package-product">
+            <img src="images/gluten-free-meal.jpg" alt="Gluten-Free Meal">
+            <div class="package-info">
+               <h3><strong>Gluten-Free</strong></h3>
+               <p>A gluten-free package without<br> restricting your cravings</p>
+               <p class="deals">Includes 4 Meals</p>
+               <p class="price">from <strong>$130</strong></p>
+            </div>
+         </div>  --}}
+         {{#each package}}
+            <a href="/showpackage/{{this._id}}">
+               <div class="package-product">
+                  <img src="{{this.productImage}}" alt="Uploaded-Image">
+                  <div class="package-info">
+                     <h3><strong>{{this.packagename}}</strong></h3>
+                     <p class="category">{{this.foodcategory}}</p>
+                     <p>{{this.description}}</p>
+                     <p class="deals">{{this.meals}}</p>
+                     <p class="price">from <strong>{{this.packageprice}}</strong></p>
+                     <div class="more-button">
+                        <a href="packages/{{this.packagename}}" class="package-more">Select Package</a>
+                     </div>
+                  </div>
+               </div>
+            </a>
+            
+         {{/each}} 
+      </div>
+      {{!-- <div class="learn-button">
+         <a href="" class="learn-more">See our full menu</a>
+      </div> --}}
+   </div>
+</section>

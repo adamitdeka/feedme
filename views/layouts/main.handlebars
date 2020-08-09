@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/css/style.css">
+      <title>{{title}}</title>
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   </head>
+   <body>
+         <section> 
+            <!-- Navbar Section -->
+            <div id="header">
+               <header class="header-a">
+                  <section id="navigation" class="nav">
+                     <nav>  
+                        <input type="checkbox" id="check">
+                        <label for="check" class="checkbotton">
+                           <i class="fas fa-bars"></i>
+                        </label>
+                        <img class="logo_pic" src="/images/logo.png" alt="logo">
+                        <div class="logo">
+                           <h4>FeedME</h4>
+                        </div> 
+                        <ul class="nav_links">
+                           <li><a href="/">Home</a></li>
+                           <li><a href="packages">All Packages</a></li>
+                        {{#if users}}
+                           <li><a href="/cart">
+                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a>
+                           </li>
+                           <li><a href="/dashboard">Dashboard</a></li>
+                           <li><a href="logout">Log Out</a></li>
+                        {{else}}
+                           <li><a href="signup">Sign Up</a></li>
+                           <li><a href="/login">Login</a></li>
+                        {{/if}}
+                        </ul>
+                     </nav>
+                  </section>
+               </header>
+            </div>
+            <main>
+               
+               {{{ body }}}
+
+            </main>
+            <!-- Footer -->
+            <footer>
+               <div class="inner-footer">
+                  <div class="footer-items">
+                     <h2>FeedMe</h2>
+                     <div class="border">
+                        <ul>
+                           <li><a href="/">Home</a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="packages">All Packages</a></li>
+                           <li><a href="#">Contact Us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-items">
+                     <h2>Quick Links</h2> 
+                     <div class="social-media">
+                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </footer> 
+            <div class="footer-bottom">
+               Copyright &copy; Irene Hu 2020
+            </div> 
+         </section>
+      <script language="javascript" src="/js/script.js"></script>
+   </body>
+</html>

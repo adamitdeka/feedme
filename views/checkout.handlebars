@@ -1,0 +1,41 @@
+<section>
+   <div>
+      <h1>Shopping Cart</h1>
+      <hr />
+      <div class="shopping-cart">
+         <table class="table ">
+            <thead>
+               <tr>
+                  <th>#</th>
+                  <th>Product</th>
+                  <th>Description</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+               </tr>
+            </thead>
+            <tbody id="table">
+            {{#each employees}}
+                <tr>
+                    {{!-- <td>{{}}</td> --}}
+                    <td>{{product}}</td>
+                    <td>{{description}}</td>
+                    <td>{{quantity}}</td>
+                    <td>{{price}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+         </table>
+         <div class="totals">
+            <div class="totals-item">
+               <label>Grand Total</label>
+               <div class="totals-value" id="cart-total">{{}}</div>
+            </div>
+         </div>
+            
+            <button class="checkout">Checkout</button>
+
+      </div>
+      <hr class="">
+      <script src="../public/js/checkout.js"></script>
+   </div>
+</section>
