@@ -51,9 +51,9 @@ exports.addPackage = (req,res) => {
         foodcategory: req.body.foodcategory,
         meals: req.body.meals,
         istoppackage: req.body.istoppackage,
-        productImage: req.file.path
+        productImage: 'images/'+path.basename(req.file.path)
         };
-        
+        console.log('image file path',dataitem.productImage);
         const DataInfo = new Products(dataitem);
         
         DataInfo.save()
@@ -62,7 +62,7 @@ exports.addPackage = (req,res) => {
         res.render('packages', {entry: result})
         })
         .catch(err => {
-        console.log('Error: Meal package was not saved');
+        console.log('Error: Meal package was not saved',err);
     });
 }
 
@@ -83,7 +83,7 @@ exports.showPackage = (req, res) =>{
     });
 }
 
-exports.updatePackage = (req, res) =>{
+exports.getUpdatePackage = (req, res) =>{
     
     Products.findById(req.params.id).exec((err, result) =>{
         if(err){
@@ -101,6 +101,26 @@ exports.updatePackage = (req, res) =>{
         })
     });
 }
+exports.updatePackage = (req, res)=>{
+
+    console.log('Updating package', req.body);
+    let packageData = req.body;
+    packageData.meals = parseInt(packageData.meals)
+    packageData.packageprice = parseInt(packageData.packageprice)
+
+    Products.findOneAndUpdate({_id:req.params.id}, packageData, function(err, result) {
+        if (err) {
+            console.log('update error',err);
+            res.status(500).json({
+                err:err.message
+            })
+        }
+        else{
+            res.redirect('/clerkpackages')
+        }
+    });
+}
+
 
 exports.removePackage = (req, res)=>{
     console.log('remove running');

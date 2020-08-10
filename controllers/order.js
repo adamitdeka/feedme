@@ -124,7 +124,7 @@ exports.placeOrder = (req,res) =>{
                 let mailOptions = {
                     from: 'senecacpatesting',
                     // to: req.session.user.email,
-                    to: 'adamitdeka@gmail.com',
+                    to: req.session.user.email,
                     subject: 'Order Placed',
                     html: `<h3>Your order ${order._id} has been placed</h3>`
                 };
